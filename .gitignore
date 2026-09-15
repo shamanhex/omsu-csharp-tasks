@@ -324,3 +324,5 @@ __pycache__/
 
 ## VSCode
 .vscode/
+src/UAT.Labs/RunCheckLab01.Requirements.md
+src/Labs/Program.MockLab01.cs
