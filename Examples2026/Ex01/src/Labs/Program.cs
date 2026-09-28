@@ -1,16 +1,15 @@
-﻿using System.Runtime.CompilerServices;
-using Labs.Utils;
+﻿using Labs.Utils;
 
 namespace Labs
 {
     public class Program
     {
-
         public static void Main(string[] args)
         {
             Dictionary<string, string?> parameters = CmdArgsParser.Parse(args);
 
             Console.WriteLine("Parameters:");
+            
             foreach(KeyValuePair<string, string?> param in parameters)
             {
                 Console.WriteLine("{0}: {1}", param.Key, param.Value);
@@ -25,14 +24,43 @@ namespace Labs
                 Console.WriteLine("    -z - value of Z");
             }
 
-            int iTask = int.Parse(parameters["--task"]);
-            if (iTask == 1)
+            try
             {
-                Console.WriteLine("Calculator will here");
+                int iTask = int.Parse(parameters["--task"]);
+
+                if (int.TryParse(parameters["--task"], out int iTask1))
+                {
+                    
+                }
+                
+                if (iTask == 1)
+                {
+                    Console.WriteLine("Calculator will here");
+                }
+                else
+                {
+                    Console.WriteLine("ERROR: Task {0} not found.", iTask);
+                }
+            } 
+            catch (Exception ex)
+            {
+                Console.WriteLine("ERROR: Value {0} is not integer", parameters["--task"]);
             }
-            else
+
+            void foo(int val)
             {
-                Console.WriteLine("ERROR: Task {0} not found.", iTask);
+                if (val == 0)
+                {
+                    Console.WriteLine("Нельзя делить на 0");
+                    return;
+                }
+                if (val < 0)
+                {
+                    Console.WriteLine("Val должен быть больше 0");
+                    return;
+                }
+                //...
+                
             }
         }
     }
