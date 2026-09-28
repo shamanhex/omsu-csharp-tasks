@@ -324,5 +324,70 @@ __pycache__/
 
 ## VSCode
 .vscode/
+*.code-workspace
+
+## Local History for Visual Studio / Visual Studio Code
+.localhistory/
+.vshistory/
+.history/
+
+## .NET SDK / MSBuild
+.dotnet/
+*.binlog
+*.nvuillog
+[Aa][Rr][Mm]64[Ee][Cc]/
+*.idb
+*_i.h
+*.sarif
+
+## Code coverage (Coverlet, OpenCover, Fine Code Coverage)
+coverage*.json
+coverage*.xml
+coverage*.info
+OpenCover/
+.fcc/
+
+## Ionide (F# / VS Code .NET tooling)
+.ionide/
+
+## MFractor (Xamarin productivity tool) working folder
+.mfractor/
+
+## Visual Studio migration backup
+MigrationBackup/
+
+## Fody - auto-generated XML schema
+FodyWeavers.xsd
+
+## Azure Stream Analytics local run output
+ASALocalRun/
+
+## BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+## Windows Installer files
+*.msi
+*.msix
+*.msm
+*.msp
+
+## Local secrets / environment
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+
+## OS-generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+## Project-specific
 src/UAT.Labs/RunCheckLab01.Requirements.md
 src/Labs/Program.*.bak
