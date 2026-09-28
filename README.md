@@ -8,7 +8,24 @@
 
 Варианты лабораторных работ выдаются преподавателем индивидуально каждому студенту для первой и второй лабораторной работы.
 
-Для реализации рекомендуется использовать Microsoft Visual Studio любой версии и редакции.
+Для реализации рекомендуется использовать Microsoft Visual Studio любой версии и редакции (Windows), Visual Studio Code или JetBrains Rider (Windows, Linux, macOS).
+
+## С чего начать
+
+Пошаговая инструкция: установка Git, .NET SDK 10.0 и PowerShell, скачивание проекта, сборка, запуск программы и автотестов. Выберите свою операционную систему:
+
+| [Windows](./Docs/Start-Windows.md) | [Linux](./Docs/Start-Linux.md) | [macOS](./Docs/Start-macOS.md) |
+|---|---|---|
+
+Краткая шпаргалка (для тех, у кого всё уже установлено):
+
+| Действие | Windows (PowerShell) | Linux / macOS (терминал) |
+|---|---|---|
+| Скачать проект | `git clone https://github.com/shamanhex/omsu-csharp-tasks.git` | то же |
+| Перейти в папку проекта | `cd omsu-csharp-tasks/src/Labs` | то же |
+| Собрать | `dotnet build` | то же |
+| Запустить программу | `.\bin\Debug\net10.0\Labs.exe --task 1 -x 1 -y 2 -z 3` | `./bin/Debug/net10.0/Labs --task 1 -x 1 -y 2 -z 3` |
+| Запустить автотесты | `..\UAT.Labs\RunCheckLab01.ps1 -Variant 1` | `pwsh ../UAT.Labs/RunCheckLab01.ps1 -Variant 1` |
 
 ## Задания
 
